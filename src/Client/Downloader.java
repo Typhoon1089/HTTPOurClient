@@ -60,9 +60,9 @@ public class Downloader extends Thread{
 			case AGGRESSIVE:
 				adaptationLogic = (AdaptationLogic)(new AggressiveAlgorithm(this));
 				break;
-//			case BERLIN:
-//				adaptationLogic = (AdaptationLogic)(new BerlinAlgorithm(this));
-//				break;
+			case BERLIN:
+				adaptationLogic = (AdaptationLogic)(new BerlinAlgorithm(this));
+				break;
 //			case FESTIVE:
 //				adaptationLogic = (AdaptationLogic)(new FestiveAlgorithm(this));
 //				break;
