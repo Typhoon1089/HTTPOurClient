@@ -21,4 +21,6 @@ The key component that we focus on is Adaptation engine. In HTTP/1.1-based strea
 
 I created the abstract class called AdaptationLogic. Other proposed adaptation methods can be employed by inheriting this class. In this packet, I included three adaptation methods, namely Aggressive method [[1](http://ieeexplore.ieee.org/document/6774590)], Berlin method [[2](http://ieeexplore.ieee.org/document/6229732)], and Wilo method [[3](http://ieeexplore.ieee.org/document/6825039)].
 
-In conclusion, I don't aim my best effort at making my testbed to be well-known and optimal one because Internet streaming technologies are always improved quickly, but I hope that some people will encourage my ideas including inside it.
+In conclusion, I don't aim my best effort at making my testbed to be well-known and optimal one because Internet streaming technologies are always improved quickly, but I hope that some people will encourage my ideas including inside it. 
+
+*Happy coding with HTTPOurClient*
