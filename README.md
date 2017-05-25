@@ -16,10 +16,13 @@ I consider the simple streaming system architecture with a HTTP streaming server
  <div class = "thecap">Figure 1: Testbed organization </div>
 </div>
 
-## How to implement a new adaptation method in HTTPOurClient
-The key component that we focus on is Adaptation engine. In HTTP/1.1-based streaming, the client downloads the video segment and then makes decisions on which video quality should be requested for the next segment. Therefore, the client is employed with only two threads: one is player and another is downloader/adaptation. 
+## HTTP Adaptive Streaming Client
+In video streaming, the client downloads and playbacks video segments simultaneously. Therefore, I employed the client with two main threads one is player and another is downloader. Both the player and downloader share the same client buffer.
 
-I created the abstract class called AdaptationLogic. Other proposed adaptation methods can be employed by inheriting this class. In this packet, I included three adaptation methods, namely Aggressive method [[1](http://ieeexplore.ieee.org/document/6774590)], Berlin method [[2](http://ieeexplore.ieee.org/document/6229732)], and Wilo method [[3](http://ieeexplore.ieee.org/document/6825039)].
+The key component that we focus on is Adaptation engine. As with HTTP/1.1-based streaming, the client downloads the video segment and then makes decisions on which video quality should be requested for the next segment. Therefore, the adaptation engine is employed as a function in the downloader-related class. 
+ 
+## How to implement a new adaptation method in HTTPOurClient
+For the purpose of extensibility, I created the abstract class called AdaptationLogic. A proposed adaptation method can be employed by inheriting this class. In this project, I included three adaptation methods, namely Aggressive method [[1](http://ieeexplore.ieee.org/document/6774590)], Berlin method [[2](http://ieeexplore.ieee.org/document/6229732)], and Wilo method [[3](http://ieeexplore.ieee.org/document/6825039)].
 
 In conclusion, I don't aim my best effort at making my testbed to be well-known and optimal one because Internet streaming technologies are always improved quickly, but I hope that some people will encourage my ideas including inside it. 
 
